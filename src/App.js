@@ -1,12 +1,13 @@
-import logo from './logo.svg';
-import './App.css';
-
+import "./App.css";
+import List from "./components/List/List";
+import Chat from "./components/Chat/Chat";
+import Detail from"./components/Detail/Detail";
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-       
-      </header>
+    <div className="container">
+      <List />
+      <Chat />
+      <Detail />
     </div>
   );
 }
