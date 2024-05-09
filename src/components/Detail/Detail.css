@@ -1,3 +1,91 @@
-.detail{
-    flex:1;
+.detail {
+  flex: 1;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  .user {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0px;
+    border-bottom: 1px solid grey;
+    padding-bottom: 10px;
+    h2 {
+      font-size: 22px;
+    }
+    p {
+      font-size: 14px;
+    }
+    img {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+    }
+  }
+  .info {
+    .photoes {
+      height: 30vh;
+    }
+    .option {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      padding: 10px 0px 0px 0px;
+      .title {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        span{
+            font-size: 12px;
+        }
+      }
+      .photo {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+
+        overflow-y: scroll;
+        .photoitem {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .downloadicon{
+            font-size: 17px;
+            margin-right: .2rem;
+          }
+          .photodetail {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            img {
+              width: 40px;
+              height: 40px;
+            }
+            span {
+              font-weight: 300;
+              font-size: 11px;
+            }
+          }
+        }
+      }
+    }
+  }
+  button {
+    padding: 5px;
+    background-color: rgba(230, 74, 105, 0.553);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+
+    &:hover {
+      background-color: rgba(220, 20, 60, 0.796);
+    }
+    &.logout {
+      padding: 5px;
+      background-color: #1a73e8;
+    }
+  }
 }
