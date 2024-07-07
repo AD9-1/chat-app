@@ -25,6 +25,9 @@
     }
   }
   .info {
+    display:flex;
+    flex-direction: column;
+
     .photoes {
       height: 30vh;
     }

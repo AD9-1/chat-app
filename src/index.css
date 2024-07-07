@@ -8,7 +8,6 @@
 }
 body {
   background-image: url("../public/bg.jpg");
-
   background-size: contain;
   display: flex;
   align-items: center;

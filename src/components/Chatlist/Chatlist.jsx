@@ -3,6 +3,7 @@ import "./Chatlist.css";
 import SearchIcon from "@mui/icons-material/Search";
 import AddCircleOutlineIcon from "@mui/icons-material/AddCircleOutline";
 import RemoveCircleOutlineIcon from "@mui/icons-material/RemoveCircleOutline";
+import AddUser from "./AddUser/AddUser";
 const Chatlist = () => {
   const [addMode, setAddMode] = useState(false);
   return (
@@ -74,6 +75,7 @@ const Chatlist = () => {
           <h4>Hello</h4>
         </div>
       </div>
+      {addMode&&<AddUser/>}
     </div>
   );
 };
