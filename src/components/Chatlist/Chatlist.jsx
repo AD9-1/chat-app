@@ -17,7 +17,8 @@ const Chatlist = () => {
       doc(db, "userchats", currentUser.id),
       async (res) => {
         const items = res.data().chats;
-        const promises = items.map(async (item) => {
+        const promises = items.map(async (item) => 
+          {
           const userDocRef = doc(db, "users", item.receiverId);
           const userDocSnap = await getDoc(userDocRef);
           const user = userDocSnap.data();
@@ -57,7 +58,7 @@ const Chatlist = () => {
             <div className="item" key={index}>
               <img src="./avatar.png" alt="" />
               <div className="text">
-                <span>Jane Doe</span>
+                <span>{chat.user.username}</span>
                 <h4>{chat.lastMessage}</h4>
               </div>
             </div>;

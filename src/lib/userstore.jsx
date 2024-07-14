@@ -4,16 +4,21 @@ import { db } from "./firebase";
 
 export const userstore = create((set) => ({
   currentUser: null,
-  isLoading:true,
+  isLoading: true,
   fetchUserInfo: async (uid) => {
     if (!uid) return set({ currentUser: null, isLoading: false });
+
     try {
       const docRef = doc(db, "users", uid);
+
       const docSnap = await getDoc(docRef);
-      if (docSnap.exists()) {
-        set({ currentUser: docSnap.data(), isLoading: false });
+      console.log("Document reference:", docRef);
+      console.log("Document exists:", docSnap);
+      console.log("Document data:", docSnap.data());
+      if (docSnap) {
+        return set({ currentUser: docSnap.data(), isLoading: false });
       } else {
-        set({ currentUser: null, isLoading: false });
+        return set({ currentUser: null, isLoading: false });
       }
     } catch (err) {
       return set({ currentUser: null, isLoading: false });
